@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include("includes/connection.php");
 
 $mid = $_GET['mid'];
 
@@ -7,12 +7,13 @@ $sql = "SELECT * FROM form WHERE mid='$mid'";
 $data = mysqli_query($conn,$sql);
 $result = mysqli_fetch_assoc($data);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css"href="style.css">
+    <link rel="stylesheet" type="text/css"href="assets/style.css">
     <title>Registration Form</title>
 </head>
 <body>
@@ -93,12 +94,9 @@ if(isset($_POST['update']))
 
     $data = mysqli_query($conn,$query);
 
-    if($data)
+   if($data)
     {
-        echo "Record Updated Successfully";
-        <meta http-equiv="refresh" content="1;url=http://localhost/DMRF/display.php">
-        <?php
-
+        echo "<meta http-equiv='refresh' content='1;url=display.php'>";
     }
     else
     {
