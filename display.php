@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("includes/connection.php");
 
 $sql = "SELECT * FROM form";
 $data = mysqli_query($conn, $sql);
