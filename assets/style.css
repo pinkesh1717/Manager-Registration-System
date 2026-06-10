@@ -1,0 +1,61 @@
+/* Moved stylesheet into assets/ */
+*
+{
+ padding:0;
+ margin:0;
+ box-sizing: border-box;
+}
+body
+{
+ background: #f2f2f2;
+ padding:0 10px;
+}
+.container
+{
+    max-width: 500px;
+    width : 100%;
+    background-color: white;
+    margin:20px auto;
+    padding: 20px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+}
+.container .tittle
+{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom:25px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+}
+.container .form
+{
+    width:100%;
+}
+.container .form .input_field
+{
+    margin-bottom: 15px;
+    display:flex;
+    align-items: center;
+}
+.container .form .input_field label
+{
+    width: 100px;
+    margin-right:10px;
+}
+.container .form .input_field .btn
+{
+   width : 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border:0;
+    background:#333;
+    color:white;
+    cursor: pointer;
+    border-radius:3px;
+    outline :none;
+}
+.container .form .input_field .btn:hover
+{
+    background:purple;
+}
