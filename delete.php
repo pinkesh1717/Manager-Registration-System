@@ -1,6 +1,6 @@
 <?php
 
-include('connection.php');
+include("includes/connection.php");
 
 $id = $_GET['mid'];
 
@@ -12,7 +12,7 @@ if($data)
 {
     echo "Record Deleted Successfully";
     ?>
-    <meta http-equiv="refresh" content="1;url=http://localhost/DMRF/display.php">
+    <meta http-equiv="refresh" content="1;url=display.php">
     <?php
 }
 else
