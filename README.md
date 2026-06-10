@@ -1,4 +1,4 @@
-# DMRF — Manager Registration Demo
+# DMRF — Develop Manager Registration Form
 
 A simple PHP/MySQL demo for manager registration that stores basic manager details and a photo upload. This project is intended as a small CRUD example using plain PHP and MySQL (suitable for learning or quick prototyping).
 
@@ -39,8 +39,8 @@ chmod 775 uploads
 1. Open phpMyAdmin or connect via MySQL CLI and create a database (example: `dmrf`):
 
 ```sql
-CREATE DATABASE dmrf CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE dmrf;
+CREATE DATABASE pk CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE pk;
 
 CREATE TABLE form (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -60,7 +60,7 @@ CREATE TABLE form (
 $host = '127.0.0.1';
 $user = 'root';
 $pass = ''; // XAMPP default on macOS/Windows
-$db   = 'dmrf';
+$db   = 'pk';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 if(!$conn) {
@@ -70,14 +70,24 @@ if(!$conn) {
 ```
 
 ## How to Run
-1. Start Apache and MySQL via XAMPP control panel.
-2. Open a browser and go to:
-
+1. Install XAMPP on your system.
+2. Start Apache and MySQL from the XAMPP Control Panel.
+3. Copy the project folder (DMRF) into the XAMPP htdocs directory:
+```
+C:\xampp\htdocs\DMRF
+```
+4. Open phpMyAdmin and create the required database.
+```
+http://localhost/phpmyadmin
+```
+5. Import the provided SQL file (if available) or create the required table structure manually.
+6. Open a web browser and navigate to:
 ```
 http://localhost/DMRF/form.php
 ```
+7. Fill out the Manager Registration Form and submit the details.
+8. Registered managers can be viewed, updated, and deleted from the display page.
 
-3. Fill the manager registration form and submit.
 
 ## Important Implementation Notes
 - The current `form.php` performs a file upload using `move_uploaded_file()` to the `uploads/` folder and inserts filenames into the DB.
